@@ -1,0 +1,27 @@
+﻿<Window x:Class="LedCubeManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LedCubeManager"
+        mc:Ignorable="d"
+        Title="LED-Cube Manager" Height="450" Width="800"
+        >
+    <Grid>
+        <StackPanel 
+            Orientation="Horizontal" 
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+        >
+            <Label Content="Animation Speed:" HorizontalAlignment="Center"/>
+            <StackPanel 
+                Orientation="Vertical" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+            >
+                <Slider Minimum="1" Maximum="255" Value="{Binding SpeedSliderValue}"  Width="200"/>
+                <Label Content="{Binding Path=SpeedSliderValue, Mode=OneWay}" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
